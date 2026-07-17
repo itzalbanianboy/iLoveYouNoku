@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iLoveYouNoku</title>
+
+<link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+
+@keyframes bounce{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(3px);
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<img src="hieu-ginta-artstation.jpg" style="
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+object-fit:cover;
+z-index:-1;
+">
+
+
+<header style="
+text-align:center;
+transform:translateY(-100px);
+">
+
+<h1 style="
+font-family:'Pokemon Solid', sans-serif;
+font-size:70px;
+color:#ffcb05;
+-webkit-text-stroke:3px #2a75bb;
+text-shadow:4px 4px 0 #000;
+">
+Japan
+</h1>
+
+</header>
+
+
+
+<!-- FIRST RED TRIGGER -->
+
+<button id="openButton" onclick="toggleBox()" style="
+position:absolute;
+top:calc(50% - 140px);
+left:calc(50% - 215px);
+transform:translate(-50%,-50%);
+font-size:35px;
+background:none;
+border:none;
+color:#e32626;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+">
+▼
+</button>
+
+
+
+<!-- FIRST POKEMON BOX -->
+
+<div id="pokemonBox" style="
+display:none;
+position:absolute;
+top:27%;
+left:36%;
+transform:translate(-50%,-50%);
+width:500px;
+background:white;
+border:6px solid #8bb7c8;
+border-radius:18px;
+padding:22px 28px;
+">
+
+<p style="
+margin:0;
+font-family:'Press Start 2P', monospace;
+font-size:18px;
+color:#3048d8;
+line-height:1.8;
+">
+
+This is a Pokemon called Ainoha Snorlax ! Love the food and to sleep !
+
+<span onclick="toggleBox()" style="
+color:#e32626;
+display:inline-block;
+font-size:35px;
+font-weight:bold;
+line-height:0;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+position:relative;
+left:-15px;
+top:-8px;
+">
+▼
+</span>
+
+</p>
+
+</div>
+
+
+
+
+
+<!-- SECOND RED TRIGGER -->
+
+<button id="openButton2" onclick="toggleBox2()" style="
+position:absolute;
+top:41%;
+left:55%;
+transform:translate(-50%,-50%);
+font-size:35px;
+background:none;
+border:none;
+color:#e32626;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+">
+▼
+</button>
+
+
+
+<!-- SECOND POKEMON BOX -->
+
+<div id="pokemonBox2" style="
+display:none;
+position:absolute;
+top:35%;
+left:56%;
+transform:translate(-50%,-50%);
+width:500px;
+background:white;
+border:6px solid #8bb7c8;
+border-radius:18px;
+padding:22px 28px;
+">
+
+<p style="
+margin:0;
+font-family:'Press Start 2P', monospace;
+font-size:18px;
+color:#3048d8;
+line-height:1.8;
+">
+
+This is Lucia losing her umbrella !
+
+<span onclick="toggleBox2()" style="
+color:#e32626;
+display:inline-block;
+font-size:35px;
+font-weight:bold;
+line-height:0;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+position:relative;
+left:-15px;
+top:-8px;
+">
+▼
+</span>
+
+</p>
+
+</div>
+
+
+
+
+
+<!-- THIRD RED TRIGGER -->
+
+<button id="openButton3" onclick="toggleBox3()" style="
+position:absolute;
+top:35%;
+left:82%;
+transform:translate(-50%,-50%);
+font-size:35px;
+background:none;
+border:none;
+color:#e32626;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+">
+▼
+</button>
+
+
+
+<!-- THIRD POKEMON BOX -->
+
+<div id="pokemonBox3" style="
+display:none;
+position:absolute;
+top:31%;
+left:78%;
+transform:translate(-50%,-50%);
+width:500px;
+background:white;
+border:6px solid #8bb7c8;
+border-radius:18px;
+padding:22px 28px;
+">
+
+<p style="
+margin:0;
+font-family:'Press Start 2P', monospace;
+font-size:18px;
+color:#3048d8;
+line-height:1.8;
+">
+
+This was in Hiroshimas Pokemon center !
+
+<span onclick="toggleBox3()" style="
+color:#e32626;
+display:inline-block;
+font-size:35px;
+font-weight:bold;
+line-height:0;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+position:relative;
+left:-15px;
+top:-8px;
+">
+▼
+</span>
+
+</p>
+
+</div>
+
+
+
+<!-- 4RTH RED TRIGGER -->
+
+<button id="openButton4" onclick="toggleBox4()" style="
+position:absolute;
+top:70%;
+left:80%;
+transform:translate(-50%,-50%);
+font-size:35px;
+background:none;
+border:none;
+color:#e32626;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+">
+▼
+</button>
+
+
+
+<!-- 4RTH POKEMON BOX -->
+
+<div id="pokemonBox4" style="
+display:none;
+position:absolute;
+top:64%;
+left:82%;
+transform:translate(-50%,-50%);
+width:310px;
+background:white;
+border:6px solid #8bb7c8;
+border-radius:18px;
+padding:22px 28px;
+">
+
+<p style="
+margin:0;
+font-family:'Press Start 2P', monospace;
+font-size:18px;
+color:#3048d8;
+line-height:1.8;
+">
+
+Ainoha and Lucia in onsen
+
+<span onclick="toggleBox4()" style="
+color:#e32626;
+display:inline-block;
+font-size:35px;
+font-weight:bold;
+line-height:0;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+position:relative;
+left:-15px;
+top:-8px;
+">
+▼
+</span>
+
+</p>
+
+</div>
+
+
+
+<!-- 5TH RED TRIGGER -->
+
+<button id="openButton5" onclick="toggleBox5()" style="
+position:absolute;
+top:11%;
+left:64%;
+transform:translate(-50%,-50%);
+font-size:35px;
+background:none;
+border:none;
+color:#e32626;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+">
+▼
+</button>
+
+
+
+<!-- 5TH POKEMON BOX -->
+
+<div id="pokemonBox5" style="
+display:none;
+position:absolute;
+top:17%;
+left:86%;
+transform:translate(-50%,-50%);
+width:310px;
+background:white;
+border:6px solid #8bb7c8;
+border-radius:18px;
+padding:22px 28px;
+">
+
+<p style="
+margin:0;
+font-family:'Press Start 2P', monospace;
+font-size:18px;
+color:#3048d8;
+line-height:1.8;
+">
+
+Y find them all?
+
+<br><br>
+
+
+<button onclick="window.location.href='yes2.html'" style="
+font-family:'Press Start 2P', monospace;
+font-size:14px;
+color:#000;
+background:#b8b8b8;
+border:4px solid #303030;
+padding:12px 18px;
+cursor:pointer;
+border-radius:3px;
+box-shadow:inset 3px 3px 0 #eeeeee, inset -3px -3px 0 #606060;
+">
+YES
+</button>
+
+
+<button onclick="toggleBox5()" style="
+font-family:'Press Start 2P', monospace;
+font-size:14px;
+color:#000;
+background:#b8b8b8;
+border:4px solid #303030;
+padding:12px 18px;
+cursor:pointer;
+border-radius:3px;
+box-shadow:inset 3px 3px 0 #eeeeee, inset -3px -3px 0 #606060;
+">
+NO
+</button>
+
+
+</p>
+
+</div>
+
+
+<!-- 6TH RED TRIGGER -->
+
+<button id="openButton6" onclick="toggleBox6()" style="
+position:absolute;
+top:67%;
+left:34.5%;
+transform:translate(-50%,-50%);
+font-size:35px;
+background:none;
+border:none;
+color:#e32626;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+">
+▼
+</button>
+
+
+
+<!-- 6TH POKEMON BOX -->
+
+<div id="pokemonBox6" style="
+display:none;
+position:absolute;
+top:62%;
+left:35%;
+transform:translate(-50%,-50%);
+width:310px;
+background:white;
+border:6px solid #8bb7c8;
+border-radius:18px;
+padding:22px 28px;
+">
+
+<p style="
+margin:0;
+font-family:'Press Start 2P', monospace;
+font-size:18px;
+color:#3048d8;
+line-height:1.8;
+">
+
+Mateo & Ainoha
+
+<span onclick="toggleBox6()" style="
+color:#e32626;
+display:inline-block;
+font-size:35px;
+font-weight:bold;
+line-height:0;
+cursor:pointer;
+animation:bounce .6s infinite alternate;
+position:relative;
+left:-15px;
+top:-8px;
+">
+▼
+</span>
+
+</p>
+
+</div>
+
+<!-- RULES BUTTON -->
+
+<input type="checkbox" id="rulesToggle" style="display:none;">
+
+<label for="rulesToggle" style="
+position:absolute;
+top:90%;
+left:8%;
+transform:translate(-50%,-50%);
+font-family:'Press Start 2P', monospace;
+font-size:16px;
+background:#b8b8b8;
+color:#000;
+border:4px solid #303030;
+padding:12px 18px;
+cursor:pointer;
+border-radius:3px;
+box-shadow:inset 3px 3px 0 #eeeeee, inset -3px -3px 0 #606060;
+">
+RULES
+</label>
+
+
+<div id="rulesBox" style="
+display:none;
+position:absolute;
+top:70%;
+left:15%;
+transform:translate(-50%,-50%);
+width:250px;
+background:white;
+border:6px solid #8bb7c8;
+border-radius:18px;
+padding:20px;
+">
+
+<p style="
+margin:0;
+font-family:'Press Start 2P', monospace;
+font-size:14px;
+color:#3048d8;
+line-height:1.8;
+">
+
+1.Press the red arrow to see the message<br>
+2.Press the red arrow to close the message
+
+</p>
+
+</div>
+
+
+<script>
+document.getElementById("rulesToggle").onclick = function(){
+
+    if(this.checked){
+        document.getElementById("rulesBox").style.display="block";
+    }
+    else{
+        document.getElementById("rulesBox").style.display="none";
+    }
+
+}
+</script>
+
+<script>
+
+
+function toggleBox() {
+
+    var box = document.getElementById("pokemonBox");
+    var button = document.getElementById("openButton");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        button.style.display = "none";
+    } else {
+        box.style.display = "none";
+        button.style.display = "block";
+    }
+
+}
+
+
+
+function toggleBox2() {
+
+    var box = document.getElementById("pokemonBox2");
+    var button = document.getElementById("openButton2");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        button.style.display = "none";
+    } else {
+        box.style.display = "none";
+        button.style.display = "block";
+    }
+
+}
+
+
+
+function toggleBox3() {
+
+    var box = document.getElementById("pokemonBox3");
+    var button = document.getElementById("openButton3");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        button.style.display = "none";
+    } else {
+        box.style.display = "none";
+        button.style.display = "block";
+    }
+
+}
+
+
+function toggleBox4() {
+
+    var box = document.getElementById("pokemonBox4");
+    var button = document.getElementById("openButton4");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        button.style.display = "none";
+    } else {
+        box.style.display = "none";
+        button.style.display = "block";
+    }
+
+}
+
+
+function toggleBox5() {
+
+    var box = document.getElementById("pokemonBox5");
+    var button = document.getElementById("openButton5");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        button.style.display = "none";
+    } else {
+        box.style.display = "none";
+        button.style.display = "block";
+    }
+
+}
+
+
+function toggleBox6() {
+
+    var box = document.getElementById("pokemonBox6");
+    var button = document.getElementById("openButton6");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        button.style.display = "none";
+    } else {
+        box.style.display = "none";
+        button.style.display = "block";
+    }
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
