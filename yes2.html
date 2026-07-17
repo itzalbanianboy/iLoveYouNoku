@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>iLoveYouNoku</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin:0;
+            width:100vw;
+            height:100vh;
+
+            background-image:url("plushies.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center -230px;
+            background-attachment:fixed;
+
+            overflow:hidden;
+
+            font-family:'Press Start 2P', cursive;
+            color:#b300b3;
+        }
+
+        .content{
+            position:absolute;
+            top:50px;
+            left:50px;
+        }
+
+        button{
+            padding:12px 24px;
+            background:black;
+            color:#b300b3;
+            border:4px solid #b300b3;
+            font-family:'Press Start 2P', cursive;
+            font-size:12px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#b300b3;
+            color:black;
+        }
+
+        .box{
+            display:none;
+            width:550px;
+            margin-top:30px;
+            padding:30px;
+
+            background:black;
+            border:6px solid #b300b3;
+        }
+
+        .title{
+            font-size:28px;
+            margin-bottom:35px;
+        }
+
+        .text{
+            font-size:12px;
+            line-height:2;
+        }
+
+        .nextButton{
+            display:block;
+            margin:35px auto 0;
+            padding:12px 28px;
+
+            background:black;
+            color:#b300b3;
+            border:4px solid #b300b3;
+
+            font-family:'Press Start 2P', cursive;
+            font-size:12px;
+            cursor:pointer;
+        }
+
+        .nextButton:hover{
+            background:#b300b3;
+            color:black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="content">
+
+        <button onclick="toggleMessage()">
+            Read Me
+        </button>
+
+        <div class="box" id="messageBox">
+
+            <div class="title">
+                Mi small bb
+            </div>
+
+            <div class="text">
+                Ola, zemra ime.<br><br>
+
+                As you can see, this is something quite different from the other messages I've written to you. I wanted to do something different this time, something a little more special.<br><br>
+
+                I really hope you like it. I miss you so much, and I can't wait to finish this practice and finally leave this country.<br><br>
+
+                In this little gift, I've included some of our favorite memories and moments that we've shared throughout these past two years together.
+            </div>
+
+            <button class="nextButton" onclick="window.location.href='yes3.html'">
+                Next
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function toggleMessage(){
+
+            const box = document.getElementById("messageBox");
+
+            if(box.style.display === "block"){
+
+                box.style.display = "none";
+
+            }else{
+
+                box.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
