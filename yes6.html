@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iLoveYouNoku</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:url("photo1.jpg") center center / cover fixed no-repeat;
+    color:white;
+    font-family:'Press Start 2P', cursive;
+    min-height:100vh;
+}
+
+/* Center button */
+
+.start{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+button{
+    font-family:'Press Start 2P', cursive;
+    font-size:18px;
+    color:white;
+    background:black;
+    border:4px solid white;
+    padding:15px 30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:white;
+    color:black;
+}
+
+/* Hidden letter */
+
+.message{
+    display:none;
+    width:85%;
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+
+    background:rgba(0,0,0,.55);
+    border-radius:20px;
+
+    text-align:center;
+    font-size:14px;
+    line-height:2.4;
+    text-shadow:2px 2px 4px black;
+}
+
+.heart{
+    font-size:40px;
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="start">
+    <button onclick="showMessage()">
+        READ ME
+    </button>
+</div>
+
+<div class="message" id="message">
+
+	You have been in the end of this small gift. <br><br>
+	I hope your journey was worth every moment and that you truly enjoyed it. <br><br>
+	This jury will continue from all the memories that we will be sharing on.<br><br><br>
+
+	You know that I love you and this relationship it means a lot to me . <br><br>
+	It’s the longest relationship I have ever been. Is so different when I do have someone that really loves me ,<br><br>
+	take care of me , make me gifts after the only one that was my mother . <br><br>
+	I really appreciate everything that you’ve done for me, and I hope that you appreciate the things that I’ve done for you too.<br><br><br>
+	
+	
+
+<div class="heart">❤️</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+
+    document.querySelector(".start").style.display = "none";
+
+    document.getElementById("message").style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
