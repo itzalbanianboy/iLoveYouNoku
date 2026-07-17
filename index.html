@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iLoveYouNoku</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  background:url('background.png') no-repeat center center fixed;
+  background-size:cover;
+  overflow:hidden;
+  color:white;
+}
+
+
+.hero{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:40px;
+}
+
+
+h1{
+  font-family:'Press Start 2P', cursive;
+  color:white;
+  font-size:32px;
+  text-shadow:4px 4px 0 #000;
+}
+
+
+.hero img{
+  width:170px;
+  image-rendering:pixelated;
+}
+
+
+.heart{
+
+  text-align:center;
+  font-size:40px;
+  animation:pulse 1.5s infinite;
+  margin-top:30px;
+
+}
+
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.3);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+
+button{
+
+font-family:'Press Start 2P', cursive;
+font-size:18px;
+color:white;
+background:black;
+border:4px solid white;
+padding:15px 30px;
+cursor:pointer;
+
+}
+
+
+.text{
+
+font-family:'Press Start 2P', cursive;
+font-size:12px;
+text-align:center;
+line-height:2;
+text-shadow:2px 2px 0 #000;
+margin-top:30px;
+
+}
+
+
+/* START BUTTON POSITION */
+
+.start{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<audio id="music" loop>
+
+<source src="megalovania.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+<div class="start">
+
+<button onclick="startPage()">
+
+START
+
+</button>
+
+</div>
+
+
+
+<div id="page" style="display:none;">
+
+
+<div class="heart">♥</div>
+
+
+<div class="hero">
+
+<img src="maru.png" alt="Kuromi">
+
+<h1>iLoveYouNoku</h1>
+
+<img src="huromi.png" alt="Badtz-Maru">
+
+</div>
+
+
+
+<div class="text">
+
+
+<h1>Hola mi zemra</h1>
+
+
+<br><br>
+
+
+<h2>
+
+This is something unlike anything else.<br>
+
+Remember, sometimes “NO” isn’t an option.<br>
+
+Are you ready?<br>
+
+Before you choose, make a wish… and think carefully.
+
+</h2>
+
+
+<br><br>
+
+
+<a href="yes.html">
+
+<button>
+YES
+</button>
+
+</a>
+
+
+<a href="no.html">
+
+<button>
+NO
+</button>
+
+</a>
+
+
+<br><br><br>
+
+
+IDEA BASED ON MEMORIES
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function startPage(){
+
+let music = document.getElementById("music");
+
+music.volume = 0.5;
+
+music.play();
+
+
+document.getElementById("page").style.display="block";
+
+
+document.querySelector(".start").style.display="none";
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
