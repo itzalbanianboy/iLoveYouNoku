@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>iLoveYouNoku</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Heart Challenge</title>
+
+
+<style>
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+body{
+
+    background:black;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:monospace;
+
+}
+
+
+
+
+
+/* THINK TEXT */
+
+
+#think{
+
+    position:absolute;
+
+    top:20%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#ff0033;
+
+    font-size:55px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+
+/* HEART */
+
+
+#heart{
+
+
+    width:180px;
+
+    height:180px;
+
+
+    position:absolute;
+
+
+    left:50%;
+
+    top:50%;
+
+
+    transform:translate(-50%,-50%) rotate(-45deg);
+
+
+    background:#ff0033;
+
+
+    cursor:pointer;
+
+
+    transition:left 0.5s ease, top 0.5s ease;
+
+
+}
+
+
+
+
+#heart:before,
+
+#heart:after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:180px;
+
+
+    height:180px;
+
+
+    background:#ff0033;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+#heart:before{
+
+
+    top:-90px;
+
+    left:0;
+
+
+}
+
+
+
+#heart:after{
+
+
+    left:90px;
+
+    top:0;
+
+
+}
+
+
+
+
+
+
+
+/* CLICK EFFECT */
+
+
+.hit{
+
+
+    animation:hit 0.15s;
+
+}
+
+
+
+@keyframes hit{
+
+
+0%{
+
+transform:translate(-50%,-50%) rotate(-45deg) scale(1);
+
+}
+
+
+
+50%{
+
+transform:translate(-50%,-50%) rotate(-45deg) scale(0.75);
+
+}
+
+
+
+100%{
+
+transform:translate(-50%,-50%) rotate(-45deg) scale(1);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* EXPLOSION */
+
+
+.explode{
+
+
+    animation:explode 0.8s forwards;
+
+
+}
+
+
+
+@keyframes explode{
+
+
+0%{
+
+transform:translate(-50%,-50%) rotate(-45deg) scale(1);
+
+opacity:1;
+
+}
+
+
+
+100%{
+
+transform:translate(-50%,-50%) rotate(-45deg) scale(5);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* MESSAGE PLATE */
+
+
+.plate{
+
+
+display:none;
+
+
+position:absolute;
+
+
+top:50%;
+
+
+left:50%;
+
+
+transform:translate(-50%,-50%);
+
+
+
+width:650px;
+
+
+padding:40px;
+
+
+background:#111;
+
+
+border:5px solid #ff0033;
+
+
+color:#ff0033;
+
+
+text-align:center;
+
+
+font-size:25px;
+
+
+}
+
+
+
+.plate h1{
+
+
+font-size:45px;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+button{
+
+
+margin-top:35px;
+
+
+width:220px;
+
+
+height:70px;
+
+
+background:#ff0033;
+
+
+color:black;
+
+
+border:none;
+
+
+font-size:28px;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+button:hover{
+
+
+background:white;
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+<div id="think">
+
+THINK
+
+</div>
+
+
+
+
+<div id="heart"></div>
+
+
+
+
+
+
+
+<div id="good" class="plate">
+
+
+<h1>
+HEART SAVED
+</h1>
+
+
+<p>
+
+You stopped.<br><br>
+
+You decided not to hurt the heart.
+
+</p>
+
+
+<button onclick="location.href='yes5.html'">
+
+NEXT
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="bad" class="plate">
+
+
+<h1>
+HEART BROKEN
+</h1>
+
+
+<p>
+
+The heart could not survive.<br><br>
+
+You reached 10 hits.
+
+</p>
+
+
+<button onclick="location.href='yes5.html'">
+
+NEXT
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+let clicks=0;
+
+let destroyed=false;
+
+let timer;
+
+
+
+const heart=document.getElementById("heart");
+
+
+
+
+
+
+
+// REMOVE THINK AFTER 3 SECONDS
+
+
+setTimeout(()=>{
+
+
+document.getElementById("think").style.display="none";
+
+
+},3000);
+
+
+
+
+
+
+
+
+function resetTimer(){
+
+
+
+clearTimeout(timer);
+
+
+
+timer=setTimeout(()=>{
+
+
+
+if(clicks>0 && clicks<10 && !destroyed){
+
+
+
+heart.style.display="none";
+
+
+document.getElementById("good").style.display="block";
+
+
+}
+
+
+
+},6000);
+
+
+
+}
+
+
+
+
+
+
+
+heart.onclick=function(){
+
+
+
+if(destroyed){
+
+return;
+
+}
+
+
+
+clicks++;
+
+
+
+
+heart.classList.remove("hit");
+
+
+void heart.offsetWidth;
+
+
+heart.classList.add("hit");
+
+
+
+
+
+if(clicks>=10){
+
+
+destroyed=true;
+
+
+clearTimeout(timer);
+
+
+
+heart.classList.add("explode");
+
+
+
+setTimeout(()=>{
+
+
+heart.style.display="none";
+
+
+document.getElementById("bad").style.display="block";
+
+
+},800);
+
+
+
+return;
+
+
+}
+
+
+
+
+
+
+
+setTimeout(()=>{
+
+
+let x=Math.random()*(window.innerWidth-250);
+
+let y=Math.random()*(window.innerHeight-250);
+
+
+
+heart.style.left=x+"px";
+
+
+heart.style.top=y+"px";
+
+
+
+},150);
+
+
+
+
+
+resetTimer();
+
+
+
+};
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
